@@ -1,9 +1,9 @@
-import React from 'react';
-import MovieCard from './MovieCard';
+import React from "react";
+import MovieCard from "./MovieCard";
 
 const MovieList = ({ movies }) => {
   return (
-    <div>
+    <div className="grid grid-cols-auto gap-5">
       {movies.map((movie) => (
         <MovieCard key={movie.imdbID} movie={movie} />
       ))}

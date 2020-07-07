@@ -1,20 +1,30 @@
-import React from 'react';
+import React from "react";
 
 const NotFound = ({ showHome }) => {
   return (
-    <>
-      {showHome ? (
-        <div>
-          <h1>Welcome to MovieDB</h1>
-          <h2>Search for a movie name to begin</h2>
-        </div>
-      ) : (
-        <div>
-          <h1>No Movies Found</h1>
-          <h2>Try searching for a different movie</h2>
-        </div>
-      )}
-    </>
+    <div className="flex items-center justify-center mt-20">
+      {showHome
+        ? (
+          <div className="flex flex-col items-center text-gray-700">
+            <h1 className="text-4xl font-semibold tracking-wider">
+              Welcome to MovieDB
+            </h1>
+            <h2 className="text-2xl font-normal tracking-wide">
+              Search for a movie name to begin
+            </h2>
+          </div>
+        )
+        : (
+          <div className="flex flex-col items-center text-gray-700">
+            <h1 className="text-4xl font-semibold tracking-wider">
+              No movies found
+            </h1>
+            <h2 className="text-2xl font-normal tracking-wide">
+              Try searching for a different movie
+            </h2>
+          </div>
+        )}
+    </div>
   );
 };
 
