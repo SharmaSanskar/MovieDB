@@ -43,7 +43,7 @@ const MovieCard = ({ movie, openInfo }) => {
         className="absolute opacity-0 w-full text-center pt-32 h-full text-white font-bold text-3xl hover:opacity-100 hover:bg-opacity-50 bg-black transition ease-in-out duration-700"
         style={moreInfoStyle}
       >
-        More info
+        More Info
       </div>
     </div>
   );

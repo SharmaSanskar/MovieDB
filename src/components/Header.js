@@ -6,8 +6,8 @@ const Header = ({ getMovie }) => {
   };
   return (
     <div className="bg-gray-900 flex flex-col items-center">
-      <h1 className="text-white font-light text-5xl tracking-widest my-1">
-        Movie<span className="font-medium text-gray-500">DB</span>
+      <h1 className="text-white font-normal text-5xl tracking-widest my-1">
+        Movie<span className="font-medium text-gray-600">DB</span>
       </h1>
       <input
         autoFocus
