@@ -2,7 +2,7 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
-      maxHeight: {
+      height: {
         custom: "20rem",
       },
       gridTemplateColumns: {

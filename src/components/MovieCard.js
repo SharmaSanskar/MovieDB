@@ -1,18 +1,27 @@
 import React from "react";
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, openInfo }) => {
   const string = movie.Type;
-  const type = string.charAt(0).toUpperCase() +
-    string.slice(1);
+  const type = string.charAt(0).toUpperCase() + string.slice(1);
+
   return (
     <div
+      onClick={() => openInfo(movie.imdbID)}
       className="w-64 mx-auto rounded-lg overflow-hidden shadow-2xl cursor-pointer relative"
     >
-      <img
-        className="w-full max-h-custom"
-        src={movie.Poster}
-        alt={movie.Title}
-      />
+      {(movie.Poster === "N/A")
+        ? <div
+          className="w-full h-custom bg-gray-900 text-2xl text-gray-700 font-bold flex flex-col items-center justify-center"
+        >
+          <p>No</p>
+          <p>Poster</p>
+          <p>Available</p>
+        </div>
+        : <img
+          className="w-full h-custom"
+          src={movie.Poster}
+          alt={movie.Title}
+        />}
 
       <div
         className="px-5 py-2 bg-gray-200 h-full"
