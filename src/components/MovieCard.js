@@ -4,6 +4,12 @@ const MovieCard = ({ movie, openInfo }) => {
   const string = movie.Type;
   const type = string.charAt(0).toUpperCase() + string.slice(1);
 
+  const moreInfoStyle = {
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%,-50%)",
+  };
+
   return (
     <div
       onClick={() => openInfo(movie.imdbID)}
@@ -35,11 +41,7 @@ const MovieCard = ({ movie, openInfo }) => {
 
       <div
         className="absolute opacity-0 w-full text-center pt-32 h-full text-white font-bold text-3xl hover:opacity-100 hover:bg-opacity-50 bg-black transition ease-in-out duration-700"
-        style={{
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%,-50%)",
-        }}
+        style={moreInfoStyle}
       >
         More info
       </div>
