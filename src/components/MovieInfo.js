@@ -40,18 +40,16 @@ const MovieInfo = ({ selected, closeInfo }) => {
         <div
           className="md:pl-8 w-full text-center md:w-8/12 md:text-left"
         >
-          <div className="flex flex-col md:flex-row">
-            <h1
-              className="text-white font-light text-5xl tracking-wider"
+          <h1
+            className="text-white font-light text-5xl tracking-wider"
+          >
+            {selected.Title}
+            <span
+              className="text-3xl text-gray-700 tracking-wider block md:pl-3 md:inline"
             >
-              {selected.Title}
-              <p
-                className="text-3xl text-gray-700 tracking-wider font-sans md:pl-3 md:inline"
-              >
-                ({selected.Year})
-              </p>
-            </h1>
-          </div>
+              ({selected.Year})
+            </span>
+          </h1>
 
           <p className="text-gray-700 text-lg">
             {selected.Runtime} | {selected.Genre}
